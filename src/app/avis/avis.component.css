@@ -1,0 +1,215 @@
+html{
+    font-size: 62.5;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.avis{
+    background-image: url(https://www.dexcomm.com/hubfs/Dexcomm_May2018/Image/testimonial-background-1200x518.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.heading{
+    text-align: center;
+    padding: 0 12%;
+    color: #000;
+    margin-bottom: 14px;
+}
+
+
+.avis .contenu{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.avis .contenu .box{
+    width: 340px;
+    margin: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.review-stars{
+    padding: 1rem 0;
+}
+
+.review-stars i{
+    font-size: 1.5rem;
+    color: rgb(255, 213, 0);
+}
+
+.avis .contenu .box .imbox{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.avis .contenu .box .imbox img{
+    position: relative;
+    width: 100%;
+    height: 150%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.avis .contenu .box .text{
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.avis .contenu .box .text h3{
+    color: #1E90FF;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+footer{
+    width:100%;
+    bottom: 0;
+    background: #153860;
+    color: #fff;
+    padding: 10px 0 5px;
+    font-size: 13px;
+    line-height: 5px;
+}
+
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 5px;
+}
+
+.col h3{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.col p{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 12px;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+form .bx{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .bx{
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+
+
+.social-icons .bx{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    background: rgb(244, 222, 222);
+}
+
+.col a {
+    color: #fff;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.fleche{
+    font-size: 25px;
+    margin-left: 1420px;
+
+}
+
+.copyright{
+    text-align: center;
+}
+
+
+

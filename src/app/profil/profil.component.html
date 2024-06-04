@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <img src="../assets/images/logo.png" alt="">
+            <span class="text">Kiné Sport Santé</span>
+        </a>
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="profil" class="bord">
+                    <i class='bx bxs-dashboard' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">Tableau de bord</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="docteur">
+                    <i class='bx bxl-product-hunt' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">Profil du docteur</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="secretaire">
+                    <i class='bx bxl-product-hunt' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">Profil du secrétaire</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="kines">
+                    <i class='bx bxs-group' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">Liste des comptes des kinés</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="seances">
+                    <i class='bx bxs-group' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">Liste des séances</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="consultations">
+                    <i class='bx bxs-group' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">Liste des consultations</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="patients">
+                    <i class='bx bxs-group' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">Liste des comptes des patients</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="carterdv">
+                    <i class='bx bxs-group' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">les Fiches de rendez-vous</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="cartevst">
+                    <i class='bx bxs-group' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">carte visite</span>
+                </a>
+            </li>
+           
+            <li class="active">
+                <a href="facture">
+                    <i class='bx bxs-group' style='color:rgba(49,47,47,0.85)' ></i>
+                    <span class="text">Listes des factures</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+    <section id="content">
+        <nav>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Rechercher...">
+                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <a href="docteur" class="profil">
+                <img src="../assets/images/user.png" alt="">
+            </a>
+            <a href="login">
+                <i class='bx bx-power-off' style='color:#060606' style='color:rgba(245, 13, 13, 0.85)' ></i>
+            </a>
+        </nav>
+
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Tableau de bord</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">Tableau de bord</a>
+                        </li>
+                        <i class='bx bx-chevron-right'></i>
+                        <li>
+                            <a class="active" href="profil">Acceuil</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <ul class="box-info">
+    
+                <li>
+                    <i class='bx bxs-group' style='color:rgba(5, 22, 215, 0.495)'  ></i>
+                    <span class="text">
+                            <tr *ngFor="let item1 of  listkine|filter:searchtext; let last = last">
+                                <td *ngIf="last">{{ item1.Id }}</td>
+                            </tr>    
+                            <p>Kinés</p>
+                    </span>
+                </li>
+              
+                        <li>
+                            <i class='bx bxs-group' style='color:rgba(240,146,12,0.85)'  ></i>
+                            <span class="text">
+                                <tr *ngFor="let item1 of  listpatient; let last = last ">
+                                    <td *ngIf="last">{{ item1.Id }}</td>
+                                </tr>
+                                <p>Patients</p>
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class='bx bxs-group' style='color:rgba(255, 46, 199, 0.85)'  ></i>
+                            <span class="text">
+                                <tr *ngFor="let item1 of  listconsultation; let last = last ">
+                                    <td *ngIf="last">{{ item1.Id }}</td>
+                                </tr>
+                                <p>Consultations</p>
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class='bx bxs-group' style='color:rgba(144, 149, 152, 0.85)'  ></i>
+                            <span class="text">
+                                <tr *ngFor="let item1 of  listseance; let last = last ">
+                                    <td *ngIf="last">{{ item1.Id }}</td>
+                                </tr>
+                                <p>Séances</p>
+                            </span>
+                        </li>
+
+
+            </ul>
+            
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Services</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nom services</th>
+                                <th>Prix par séance</th>
+                                <th>Prix mensuelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="../assets/images/massage.jpeg" alt="">
+                                    <p>Massage</p>
+                                </td>
+                                <td>30DT</td>
+                                <td><span class="statuts chinoise">100DT</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../assets/images/sport.jpg" alt="">
+                                    <p>Sport</p>
+                                </td>
+                                <td>30DT</td>
+                                <td><span class="statuts amin">100DT</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../assets/images/amincissementt.png" alt="">
+                                    <p>Amincissement</p>
+                                </td>
+                                <td>20DT</td>
+                                <td><span class="statuts massage">70DT</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../assets/images/Acupuncture chinoise.jpg" alt="">
+                                    <p>Aiguilles chinoises</p>
+                                </td>
+                                <td>40DT</td>
+                                <td><span class="statuts sport">140DT</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../assets/images/Sangsues.jpg" alt="">
+                                    <p>Ver à sangsues</p>
+                                </td>
+                                <td>25DT</td>
+                                <td><span class="statuts sport">90DT</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../assets/images/ventouse7.jpg" alt="">
+                                    <p>Ventouses médicales</p>
+                                </td>
+                                <td>40DT</td>
+                                <td><span class="statuts sport">130DT</span></td>
+                            </tr>
+                           
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="todo">
+                    <div class="head">
+                        <h4>Promo du mois</h4>
+                    </div>
+                    <ul class="todo-list">
+                        <li  class="completed">
+                            <p>Massage+Sport=150DT</p>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <p>Sport+Amincissement=120DT</p>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <p>Massage+Amincissement=110DT</p>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <p>Ventouses médicales+Amincissement=150DT</p>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <p>Massage+Ver à sangsues=160DT</p>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>

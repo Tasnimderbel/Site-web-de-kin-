@@ -11,27 +11,26 @@ import { ChangeDetectorRef } from '@angular/core';
   templateUrl: './update-user.component.html',
   styleUrls: ['./update-user.component.css']
 })
-export class UpdateUserComponent implements OnInit {
-
+export class UpdateUserComponent {
   id: any
   errorMessage: string = '';
   formGroup!: FormGroup;
   errorMessage1: string = '';
 
-  Cin!: string
   Firstname!: string
   Lastname!: string
   Phone!: string
+  Date!: string
   userdetails: any = []
 
   userforupdate: AngularFireList<any>
 
   data = {
-    Cin: '',
     Firstname: '',
 
     Lastname: '',
-    Phone: ''
+    Phone: '',
+    Date: ''
   }
   id1: any;
 
@@ -49,11 +48,6 @@ export class UpdateUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = new FormGroup({
-      CIn: new FormControl('', [
-        Validators.required,
-
-        Validators.minLength(3)
-      ]),
       fIrstname: new FormControl('', [
         Validators.required,
         Validators.pattern("[A-Za-z ]+"),
@@ -69,7 +63,12 @@ export class UpdateUserComponent implements OnInit {
         Validators.pattern("[0-9]+"),
         Validators.minLength(8),
         Validators.maxLength(13)
+      ]),
+      Date: new FormControl('', [
+        Validators.required,
       ])
+      
+
 
     });
     this.userService.getUserById(this.id1).subscribe((results) => {
@@ -91,10 +90,10 @@ export class UpdateUserComponent implements OnInit {
       y["$key"] = element.key
       this.userdetails.push(y as User);
 
-      this.data.Cin = this.userdetails[0]['Cin']
       this.data.Firstname = this.userdetails[0]['firstname']
       this.data.Lastname = this.userdetails[0]['lastname']
       this.data.Phone = this.userdetails[0]['phone']
+      this.data.Date = this.userdetails[0]['Date']
 
     })
     console.log("res");
@@ -105,10 +104,10 @@ export class UpdateUserComponent implements OnInit {
   onSubmit1() {
 
     this.userforupdate.update(this.id1, {
-      Cin: this.data.Cin,
       Firstname: this.data.Firstname,
       Lastname: this.data.Lastname,
-      Phone: this.data.Phone
+      Phone: this.data.Phone,
+      Date: this.data.Date
     }).then(_added => {
       console.log('User updated successfully!');
       this.userService.getUserById(this.id1).subscribe((results) => {
@@ -128,3 +127,5 @@ export class UpdateUserComponent implements OnInit {
 
 
 }
+
+

@@ -23,31 +23,22 @@ export class RegisterComponent implements OnInit {
 
   initForm() {
     this.myForm = this.fb.group({
-      firstname: new FormControl('', [
+      nomcomplet: new FormControl('', [
         Validators.required,
-
-
-      ]),
-      lastname: new FormControl('', [
-        Validators.required,
-
-
       ]),
       email: new FormControl('', [
         Validators.required,
         Validators.email
-
       ]),
 
       password: new FormControl('', [
         Validators.required,
-
         Validators.minLength(3)
       ]),
       repeatPassword: new FormControl('', [
         Validators.required
       ]),
-
+  
     }
 
     )
@@ -58,11 +49,12 @@ export class RegisterComponent implements OnInit {
     const password = this.myForm.get('password')?.value;
     this.authservice.signup(email, password).then(
       () => {
-        this.router.navigate(['/']);
+        alert("Enregistrement avec sucées");
+        this.router.navigate(['/login']);
       },
       (error: string) => {
         this.errorMessage = error
-        alert("connexion invalide");
+        alert("Enregistrement impossible");
 
       }
     )

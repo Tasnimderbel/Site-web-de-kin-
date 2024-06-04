@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos de nous</title>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="title">
+                <h1>A propos de nous</h1>
+            </div>
+            <div class="content">
+                <div class="article">
+                    <h3 class="titre">Bienvenu à mon site web</h3>
+                    <p class="text"> Notre cabinet a commencé modestement, avec une petite équipe et un espace de traitement limité. Nous avons travaillé dur pour établir des relations de confiance avec nos patients et pour développer notre expertise dans divers domaines de la kinésithérapie. </p>
+                    <p class="text">Notre mission est d’améliorer la qualité de vie de nos patients en favorisant leur rétablissement, en les éduquant et en les soutenant tout au long de leur parcours de santé. Nous sommes honorés de faire partie de leur chemin vers le bien-être.</p>
+                    <p>Les experts dans mon kiné sont:</p>
+                    <div class="row g-1 pb-4">
+                        <div class="col-sm-4  wow fadeIn">
+                            <div class="border rounded p-1">
+                                <div class="border rounded text-center p-2">
+                                    <i class='bx bxs-user' ></i>
+                                    <br>
+                                    <span>
+                                        <tr *ngFor="let item1 of  listdocteur; let last = last ">
+                                            <td *ngIf="last" >{{ item1.Id }}</td>
+                                        </tr>
+                                        <p>Docteur</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4  wow fadeIn">
+                            <div class="border rounded p-1">
+                                <div class="border rounded text-center p-2">
+                                    <i class='bx bxs-user' ></i>
+                                    <br>
+                                    <span>
+                                        <tr *ngFor="let item1 of  listsecretaire; let last = last ">
+                                            <td *ngIf="last" >{{ item1.Id }}</td>
+                                        </tr>
+                                        <p>Sectrétaire</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+        
+                        <div class="col-sm-4  wow fadeIn">
+                            <div class="border rounded p-1">
+                                <div class="border rounded text-center p-2">
+                                    <i class='bx bxs-group' ></i>
+                                    <br>
+                                    <span>
+                                        <tr *ngFor="let item1 of  listkine; let last = last ">
+                                            <td *ngIf="last" >{{ item1.Id }}</td>
+                                        </tr>
+                                        <p>Kinés</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <br><br><br><br><br>
+
+        
+                        <div class="col-sm-4  wow fadeIn">
+                            <div class="border rounded p-1">
+                                <div class="border rounded text-center p-2">
+                                    <i class='bx bxs-group' ></i>
+                                    <br>
+                                    <span>
+                                        <tr *ngFor="let item1 of  listpatient; let last = last ">
+                                            <td *ngIf="last" >{{ item1.Id }}</td>
+                                        </tr>
+                                        <p>Patients</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+        
+                    </div>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="../assets/images/cabinet.jpg" alt="">
+            </div>
+            <div class="row g-1 pb-4">
+               
+
+            </div>
+        </div>
+    </div>
+    <footer class="distrubited">
+        <div class="row">
+        <div class="col">
+            <h3>Liens</h3>
+            <ul>
+                <li><a href="acceuil">Acceuil</a></li><br>
+                <li><a href="a propos de nous">A propos de nous</a></li><br>
+                <li><a href="experts">Experts</a></li><br>
+                <li><a href="services">Services</a></li><br>
+                <li><a href="rendez-vous">Rendez-vous</a></li><br>
+                <li><a href="newsletter">Actualité</a></li><br>
+                <li><a href="contact">Contact</a></li><br>
+                <li><a href="avis">Avis</a></li><br>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Contactez-nous</h3>
+            <div class="adress">
+                <a href="https://www.google.com/maps/@34.8002525,10.7546653,15z?entry=ttu"> <i class='bx bxs-map' style='color:#000'  ></i></a>
+                <span>Route mahdia klm3, Sfax</span>
+            </div>
+    
+            <br><br>
+    
+    
+            <div>
+                <a href="https://contacts.google.com/"> <i class='bx bxs-phone-call' style='color:#000' ></i></a>
+                <span>74589123</span>
+            </div>
+            <br><br>
+            <div>
+                <a href="https://www.gmail.com/"> <i class='bx bxs-envelope' style='color:#000' ></i></a>
+                <span>contact@gmail.com</span>
+            </div>
+        </div>
+        <div class="col">
+            <h3>Social média</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle' style='color:#0f2cea'  ></i></a>
+                <a href="https://www.instagram.com"><i class='bx bxl-instagram-alt' style='color:#ea0f8b'  ></i></a>
+                <a href="https://www.whatsapp.com/"><i class='bx bxl-whatsapp-square' style='color:#60ea0f' ></i></a>
+                <a href="https://www.youtube.com"><i class='bx bxl-youtube bx-flip-vertical' style='color:#ea0f0f'  ></i></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="fleche"><a href="apropos"><i class='bx bx-up-arrow-alt' style='color:#ea801b'  ></i></a></div>
+    <p class="copyright">&copy; 2024  Kiné Sport Santé - Touts droits reservée</p>
+    </footer>  
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+
+h1{
+    color: #154360;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2{
+    color: #000;
+    text-align: center;
+}
+
+.container{
+    position: relative;
+    width: 27%;
+    height: 500px;
+    background-color: #f0f6fb;
+    padding: 3%;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.logo{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px #ccc;
+    font-size: 1.8em;
+    background-color: #6ba1f9;
+    color: #f0f6fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tab-body{
+    position: relative;
+    height: 308px;
+    padding: 15% 5%;
+    margin-bottom: 100px;
+    background-color: #fff;
+    color: #7aacef;
+    box-shadow: 0px 5px 10px #7c8395;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+
+.tab-body.active{
+    display: block;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #82ade6dc;
+    padding: 1.8% 0;
+    margin: 20px 0;
+}
+
+.row .input{
+    width: 90%;
+    border: none;
+    outline: none;
+    color: #82ade6dc;
+}
+
+.input::placeholder{
+    color: #82ade6dc;
+}
+
+.link{
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+    text-decoration: none;
+    color: #154360;
+    text-align: right;
+    font-size: 14px;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 120px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #6ba1f9;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+p{
+    color: #00000091;
+    margin-top: 60px;
+}
+
+li{
+    color: #000;
+}
+
+.tab-link{
+    text-decoration: none;
+    color: #154360;
+    margin: 0 3%; 
+    font-size: 14px;
+}
+
+.tab-link.active{
+    font-weight: bold;
+}
+
+.part2{
+    background: #f0efef;
+}
+
+
+
+
+
+
+

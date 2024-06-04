@@ -14,7 +14,7 @@ export class AddUserComponent {
   errorMessage1: string = '';
   errorMessage: string = '';
   addUserForm!: FormGroup;
-
+  
   Cin!: string
   Firstname!: string
   Lastname!: string
@@ -60,11 +60,12 @@ export class AddUserComponent {
 
     this.userList.push({
 
+      
       Cin: this.Cin,
       Firstname: this.Firstname,
       Lastname: this.Lastname,
       Phone: this.Phone,
-
+    
     }).then(added => {
       this.router.navigate(['/users'])
 

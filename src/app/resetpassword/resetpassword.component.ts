@@ -19,11 +19,13 @@ export class ResetpasswordComponent implements OnInit {
 
     this.authservice.resetPassword(email).then(
       () => {
-        this.router.navigate(['/']);
+        alert("email envoyée");
+        this.router.navigate(['/login']);
       },
+
       (error) => {
         this.errorMessage = error
-
+        alert("email indisponible");
       }
     )
 

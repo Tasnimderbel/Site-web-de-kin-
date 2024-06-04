@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page contactez-nous réactive</title>
+</head>
+<body>
+    <section class="contact" id="contact">
+        <h1 class="heading">Contactez-nous</h1>
+        <div class="localisation_contact_div">
+            <div class="localisation">
+                <h3>Nos adresse</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.312251411325!2d10.78020567559415!3d34.79808527288527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301d266a5d50187%3A0xf402537741c7cd08!2sRte%20de%20Mahdia!5e0!3m2!1sfr!2stn!4v1710629514635!5m2!1sfr!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div> 
+
+            
+            <div class="form_contact">
+                <h3>Envoyer un message</h3>
+                <form [formGroup]="addContactForm" (ngSubmit)="onSubmit()">
+                    <input type="text" name="nom" id="nom" formControlName="nom" class="form-control" [(ngModel)]="Nom" placeholder="Nom">
+                    <input type="email" name="email" id="email" formControlName="email" class="form-control" [(ngModel)]="Email" placeholder="Email">
+                    <input type="text" name="sujet" id="sujet" formControlName="sujet" class="form-control" [(ngModel)]="Sujet" placeholder="Sujet">
+                    <textarea  cols="20" rows="5"  name="message" id="message" formControlName="message" class="form-control" [(ngModel)]="Message" placeholder="Message"></textarea>
+                    <input type="submit" value="Envoyer le message" >
+                </form>
+            </div>  
+
+
+        </div>    
+        
+    </section>  
+
+    <footer class="distrubited">
+        <div class="row">
+        <div class="col">
+            <h3>Liens</h3>
+            <ul>
+                <li><a href="acceuil">Acceuil</a></li><br>
+                <li><a href="a propos de nous">A propos de nous</a></li><br>
+                <li><a href="experts">Experts</a></li><br>
+                <li><a href="services">Services</a></li><br>
+                <li><a href="rendez-vous">Rendez-vous</a></li><br>
+                <li><a href="newsletter">Actualité</a></li><br>
+                <li><a href="contact">Contact</a></li><br>
+                <li><a href="avis">Avis</a></li><br>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Contactez-nous</h3>
+            <div class="adress">
+                <a href="https://www.google.com/maps/@34.8002525,10.7546653,15z?entry=ttu"> <i class='bx bxs-map' style='color:#000'  ></i></a>
+                <span>Route mahdia klm3, Sfax</span>
+            </div>
+    
+            <br><br>
+    
+    
+            <div>
+                <a href="https://contacts.google.com/"><i class='bx bxs-phone-call' style='color:#000' ></i></a>
+                <span>74589123</span>
+            </div>
+            <br><br>
+            <div>
+                <a href="https://www.gmail.com/"> <i class='bx bxs-envelope' style='color:#000' ></i></a>
+                <span>contact@gmail.com</span>
+            </div>
+        </div>
+        <div class="col">
+            <h3>Social média</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle' style='color:#0f2cea'  ></i></a>
+                <a href="https://www.instagram.com"><i class='bx bxl-instagram-alt' style='color:#ea0f8b'  ></i></a>
+                <a href="https://www.whatsapp.com/"><i class='bx bxl-whatsapp-square' style='color:#60ea0f' ></i></a>
+                <a href="https://www.youtube.com"><i class='bx bxl-youtube bx-flip-vertical' style='color:#ea0f0f'  ></i></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="fleche"><a href="contact"><i class='bx bx-up-arrow-alt' style='color:#ea801b'  ></i></a></div>
+    <p class="copyright">&copy; 2024  Kiné Sport Santé - Touts droits reservée</p>
+    </footer>  
+</body>
+</html>
+
+
+
+

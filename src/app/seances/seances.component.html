@@ -1,0 +1,65 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h1>Listes des séances</h1>
+
+            <a href="https://mail.google.com/mail/u/1/#inbox">
+               <p>Cliquer ici pour voir les rendez-vous sur email</p>
+            </a>
+            <br>
+
+        <a routerLink="/profil" class="d-none d-sm-inline-block btn btn-sm btn-white shadow-sm"><i class='bx bx-chevrons-left' style='color:#7d7b7b' ></i> Précédent</a>
+        <a routerLink="/addseance" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class='bx bxs-user-plus' style='color:#f6f4f4'  ></i> Ajouter une séance</a>
+     
+    </div>
+
+    <div class="form-outline mt-3">
+        <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="Rechercher"  aria-label="search"/>
+      </div>
+
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><i class='bx bx-fingerprint' style='color:#898888' ></i> Id </th>
+                    <th><i class='bx bxs-user' style='color:#838282'  ></i> Nom </th>
+                    <th><i class='bx bxs-user' style='color:#838282'  ></i> Prénom</th>
+                    <th><i class='bx bxs-user' style='color:#838282' ></i> Genre</th>
+                    <th><i class='bx bxs-phone' style='color:#838282' ></i> Téléphone</th>
+                    <th><i class='bx bxs-map' style='color:#838282' ></i> Adresse</th>
+                    <th><i class='bx bxs-calendar'></i>  Date</th>
+                    <th><i class='bx bxs-stopwatch' style='color:#838282'  ></i> Heure</th>
+                    <th><i class='bx bxs-first-aid'></i> Nature</th>
+                    <th><i class='bx bxs-dollar-circle'></i> Etat</th>
+                    <th><i class='bx bxs-dollar-circle'></i> Prix</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+          
+
+            <tbody>
+                <tr *ngFor="let item1 of  listseance|filter:searchtext ">
+                    <td>{{ item1.Id }}</td>
+                    <td>{{ item1.Nom }}</td>
+                    <td>{{ item1.Prenom }}</td>
+                    <td>{{ item1.Sexe }}</td>
+                    <td>{{ item1.Phone }}</td>
+                    <td>{{ item1.Adresse }}</td>
+                    <td>{{ item1.Date }}</td>
+                    <td>{{ item1.Heure }}</td>
+                    <td>{{ item1.Nature }}</td>
+                    <td>{{ item1.Etat }}</td>
+                    <td>{{ item1.Prix }}</td>
+                  
+                    <td>
+                        <div class="example-button-container">
+                            <button class="btn1" mat-mini-fab color="green" (click)="edit(item1.$key) "><i class='bx bxs-edit'></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

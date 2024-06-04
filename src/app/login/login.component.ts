@@ -45,10 +45,13 @@ export class LoginComponent implements OnInit {
     const password = this.loginForm.get('password')?.value;
     this.authservice.signInUser(email, password).then(
       () => {
-        this.router.navigate(['/users']);
+        alert("Connecté avec sucées");
+        this.router.navigate(['profil']);
+
       },
       (error) => {
         this.errorMessage = error
+        alert("Email et/ou  mot de passe incorrect");
       }
     )
   }

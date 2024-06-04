@@ -1,0 +1,100 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Modifier le profil</h6>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit1()">
+            <div class="form-group mb-3">
+                <label for="id"><i class='bx bx-fingerprint' style='color:#898888' ></i> Id:</label>
+                <input type="number" class="form-control" formControlName="id" name="id" value="{{ data.Id }}"
+                    [(ngModel)]="data.Id">
+            </div>
+            <div class="form-group mb-3">
+                <label for="nom"><i class='bx bxs-user' style='color:#838282'  ></i> Nom:</label>
+                <input type="text" class="form-control" formControlName="nom" name="nom" value="{{ data.Nom }}"
+                    [(ngModel)]="data.Nom">
+            </div>
+            <div class="form-group mb-3">
+                <label for="prenom"><i class='bx bxs-user' style='color:#838282'  ></i> Prénom:</label>
+                <input type="text" class="form-control" formControlName="prenom" name="prenom" value="{{ data.Prenom }}"
+                    [(ngModel)]="data.Prenom">
+            </div>
+            <div class="form-group mb-3">
+                <label for="dateNaissance"><i class='bx bxs-calendar'></i> Date de naissance :</label>
+                <input type="date" class="form-control" formControlName="dateNaissance" name="dateNaissance" value="{{ data.DateNaissance }}"
+                    [(ngModel)]="data.DateNaissance">
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="phone"><i class='bx bxs-phone' style='color:#838282' ></i> Téléphone :</label>
+                <input type="number" class="form-control" formControlName="phone" name="phone"
+                    value="{{ data.Phone }}" [(ngModel)]="data.Phone">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="genre"><i class='bx bxs-phone' style='color:#838282' ></i> Genre :</label>
+                <input type="text" class="form-control" formControlName="genre" name="genre"
+                    value="{{ data.Genre }}" [(ngModel)]="data.Genre">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="email"><i class='bx bxs-envelope' style='color:#838282' ></i> Email :</label>
+                <input type="email" class="form-control" formControlName="email" name="email"
+                    value="{{ data.Email }}" [(ngModel)]="data.Email">
+            </div>
+
+
+            <div class="form-group mb-3">
+                <label for="adresse"><i class='bx bxs-map' style='color:#838282' ></i> Adresse :</label>
+                <input type="text" class="form-control" formControlName="adresse" name="adresse"
+                    value="{{ data.Adresse }}" [(ngModel)]="data.Adresse">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="experience"><i class='bx bx-timer' style='color:#838282'  ></i> Expérience :</label>
+                <input type="text" class="form-control" formControlName="experience" name="experience" value="{{ data.Experience }}"
+                    [(ngModel)]="data.Experience">
+
+            </div>
+           
+            <div class="form-group mb-3">
+                <label for="role"><i class='bx bxs-edit'></i> Grade :</label>
+                <input type="text" class="form-control" formControlName="role" name="role"
+                    value="{{ data.Role }}" [(ngModel)]="data.Role">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="dateRec"><i class='bx bxs-calendar' style='color:#838282' ></i> Date recrutement:</label>
+                <input type="date" class="form-control" formControlName="dateRec" name="dateRec" value="{{ data.DateRec }}"
+                    [(ngModel)]="data.DateRec">
+
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="Specialite"><i class='bx bxs-first-aid'></i> Specialité:</label>
+                <input type="text" class="form-control" formControlName="Specialite" name="Specialite" value="{{ data.Specialite }}"
+                    [(ngModel)]="data.Specialite">
+
+            </div>
+            
+
+            <div class="form-group mb-3">
+                <label for="pass"><i class='bx bx-low-vision' style='color:#585656'  ></i> Mot de passe:</label>
+                <input type="password" class="form-control" formControlName="pass" name="pass" value="{{ data.Pass }}"
+                    [(ngModel)]="data.Pass">
+
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><i class='bx bxs-edit'></i> Modifier</button>
+                <button class="d-none d-sm-inline-block btn btn-sm btn-white shadow-sm" [routerLink]="['/docteur']"><i class='bx bx-chevrons-left' style='color:#7d7b7b' ></i> Précédent</button>
+            </div>
+
+
+
+
+        </form>
+    </div>
+</div>
+
+

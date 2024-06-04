@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="card shadow mb-4">
+        <main class="black-border">
+            <div class="card-header py-3">
+        
+                <h6 class="m-0 font-weight-bold"><img src="../assets/images/logo.png" alt=""> Kiné Sport Santé </h6>
+                
+                <tr >     
+                    
+                </tr> 
+            </div>
+            <div class="container-fluid g-0 p-2">
+                <div class="coll g-0">
+                    <div class="col ps-2"> 
+        
+                        <div class="card-body">
+                            <tr >     
+                                <th>Date:</th>
+                                <h2>Facture n°:</h2>
+                            </tr> 
+                            <table class="table">
+                            <thead *ngFor="let item1 of  listfacture ">                                
+                                    <tr >     
+                                        <th><i class='bx bx-fingerprint' style='color:#898888' ></i> Id</th>
+                                        <td>{{ item1.Id }}</td>
+                                    </tr>  
+                                    <tr >
+                                        
+                                         <th><i class='bx bxs-user' style='color:#838282'  ></i> Nom du patient</th>
+                                         <td>{{ item1.Nom }}</td>
+                                    </tr>     
+                                    <tr >
+                                        <th><i class='bx bxs-calendar'></i> Date</th>
+                                        <td>{{ item1.Date }}</td>
+                                    </tr> 
+                                    <tr >
+                                        <th><i class='bx bxs-first-aid'></i> Service</th>
+                                        <td>{{ item1.Service }}</td>
+                                    </tr>
+                                    <tr >
+                                        <th><i class='bx bxs-user' style='color:#838282' ></i> Nombre de séance</th>
+                                        <td>{{ item1.Quantite }}</td>
+                                    </tr>
+                                    <tr >
+                                        <th><i class='bx bxs-dollar-circle' style='color:#838282'></i> Mode de paiement</th>
+                                        <td>{{ item1.Etat }}</td>
+                                    </tr>  
+                                    <tr >
+                                        <th><i class='bx bxs-dollar-circle' style='color:#838282'></i> Montant</th>
+                                        <td>{{ item1.Prix }}</td>
+                                    </tr>
+                                    <tr >
+                                        <th><i class='bx bxs-dollar-circle' style='color:#838282'></i> Total</th>
+                                        <td>{{ item1.Total }}</td>
+                                    </tr> 
+                                    <tr >
+                                        <th>Signature</th>
+                                    </tr> 
+                                    <tr >
+                                        <th>Action</th>
+                                        <td>
+                    
+                                            <div class="example-button-container">
+                                                <button class="btn1" mat-mini-fab color="green" (click)="edit(item1.$key) "><i class='bx bxs-edit' style='color:#0c71ec'></i></button>
+                                                <button mat-mini-fab color="green" (click)="print()"><i class='bx bxs-printer' style='color:#898888' ></i></button>
+                                            </div>
+                                        </td>
+                                    </tr> 
+ 
+                                </thead>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="card-header py-3">
+            <button class="d-none d-sm-inline-block btn btn-sm btn-white shadow-sm" [routerLink]="['/profil']"><i class='bx bx-chevrons-left' style='color:#7d7b7b' ></i> Précédent</button>
+            <a routerLink="/addfacture" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class='bx bxs-user-plus' style='color:#f6f4f4'  ></i> Ajouter une facture</a>
+        </div>
+    </div>    
+</body>
+</html>

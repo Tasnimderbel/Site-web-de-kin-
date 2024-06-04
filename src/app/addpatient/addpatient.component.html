@@ -1,0 +1,59 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h1 class="m-0 font-weight-bold text-primary">Ajouter un compte</h1>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="addPatientForm" (ngSubmit)="onSubmit()">
+            <div class="form-group mb-3">
+                <label for="id"><i class='bx bx-fingerprint' style='color:#898888' ></i> Id :</label>
+                <input type="number" name="id" id="id" formControlName="id" class="form-control" [(ngModel)]="Id">
+            </div>
+            <div class="form-group mb-3">
+                <label for="nom"><i class='bx bxs-user'></i> Nom:</label>
+                <input type="text" name="nom" id="nom" formControlName="nom" class="form-control" [(ngModel)]="Nom">
+            </div>
+            <div class="form-group mb-3">
+                <label for="prenom"><i class='bx bxs-user'></i> Prénom:</label>
+                <input type="text" name="prenom" id="prenom" formControlName="prenom" class="form-control" [(ngModel)]="Prenom">
+            </div>
+            <div class="form-group mb-3">
+                <label for="dateNaissance"><i class='bx bxs-calendar'></i> Date de naissance :</label>
+                <input type="date" name="dateNaissance" id="dateNaissance" formControlName="dateNaissance" class="form-control"
+                    [(ngModel)]="DateNaissance">
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="sexe"><i class='bx bxs-user'></i>Genre :</label>
+                <input type="text" name="sexe" id="sexe" formControlName="sexe" class="form-control" [(ngModel)]="Sexe">
+            </div>
+            <div class="form-group mb-3">
+                <label for="phone"><i class='bx bxs-phone' style='color:#838282' ></i> Téléphone :</label>
+                <input type="number" name="phone" id="phone" class="form-control" formControlName="phone"
+                    [(ngModel)]="Phone">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="adresse"><i class='bx bxs-map' style='color:#838282' ></i> Adresse :</label>
+                <input type="text" name="adresse" id="adresse" class="form-control" formControlName="adresse"
+                    [(ngModel)]="Adresse">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="dateRdv"><i class='bx bxs-calendar'></i> Date du rendez-vous :</label>
+                <input type="date" name="dateRdv" id="dateRdv" formControlName="dateRdv" class="form-control"
+                    [(ngModel)]="DateRdv">
+
+            </div>
+
+        
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" [disabled]="addPatientForm.invalid"><i class='bx bxs-user-plus' style='color:#f6f4f4'  ></i>Ajouter</button>
+                <button class="d-none d-sm-inline-block btn btn-sm btn-white shadow-sm" [routerLink]="['/patients']">Précédent</button>
+            </div>
+
+
+
+
+        </form>
+    </div>
+</div>

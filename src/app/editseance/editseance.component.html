@@ -1,0 +1,88 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Modifier la séance</h6>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit1()">
+            <div class="form-group mb-3">
+                <label for="id"><i class='bx bx-fingerprint' style='color:#898888' ></i> Id:</label>
+                <input type="number" class="form-control" formControlName="id" name="id" value="{{ data.Id }}"
+                    [(ngModel)]="data.Id">
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="nom"><i class='bx bxs-user' style='color:#838282'  ></i> Nom:</label>
+                <input type="text" class="form-control" formControlName="nom" name="nom" value="{{ data.Nom }}"
+                    [(ngModel)]="data.Nom">
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="prenom"><i class='bx bxs-user' style='color:#838282'  ></i> Prénom:</label>
+                <input type="text" class="form-control" formControlName="prenom" name="prenom" value="{{ data.Prenom }}"
+                    [(ngModel)]="data.Prenom">
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="sexe"><i class='bx bxs-user' style='color:#838282'  ></i> Genre :</label>
+                <input type="tel" class="form-control" formControlName="sexe" name="sexe"
+                    value="{{ data.Sexe }}" [(ngModel)]="data.Sexe">
+            </div>
+            <div class="form-group mb-3">
+                <label for="phone"><i class='bx bxs-phone' style='color:#838282' ></i> Téléphone :</label>
+                <input type="number" class="form-control" formControlName="phone" name="phone"
+                    value="{{ data.Phone }}" [(ngModel)]="data.Phone">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="adresse"><i class='bx bxs-map' style='color:#838282' ></i> Adresse :</label>
+                <input type="text" class="form-control" formControlName="adresse" name="adresse"
+                    value="{{ data.Adresse }}" [(ngModel)]="data.Adresse">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="date"><i class='bx bxs-calendar'></i> Date :</label>
+                <input type="date" class="form-control" formControlName="date" name="date" value="{{ data.Date }}"
+                    [(ngModel)]="data.Date">
+
+            </div>
+        
+            <div class="form-group mb-3">
+                <label for="heure"><i class='bx bxs-stopwatch' style='color:#959595'  ></i> Heure :</label>
+                <input type="text" class="form-control" formControlName="heure" name="heure" value="{{ data.Heure }}"
+                    [(ngModel)]="data.Heure">
+
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="nature"><i class='bx bxs-first-aid'></i> Nature :</label>
+                <input type="text" class="form-control" formControlName="nature" name="nature" value="{{ data.Nature }}"
+                    [(ngModel)]="data.Nature">
+
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="etat"><i class='bx bxs-dollar-circle'></i> Etat :</label>
+                <input type="text" class="form-control" formControlName="etat" name="etat" value="{{ data.Etat }}"
+                    [(ngModel)]="data.Etat">
+
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="prix"><i class='bx bxs-dollar-circle'></i> Prix :</label>
+                <input type="text" class="form-control" formControlName="prix" name="prix" value="{{ data.Prix }}"
+                    [(ngModel)]="data.Prix">
+
+            </div>
+
+            
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><i class='bx bxs-edit'></i> Modifier</button>
+                <button class="d-none d-sm-inline-block btn btn-sm btn-white shadow-sm" [routerLink]="['/seances']"><i class='bx bx-chevrons-left' style='color:#7d7b7b' ></i> Précédent</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+

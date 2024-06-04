@@ -1,0 +1,65 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Modifier la facture</h6>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit1()">
+            <div class="form-group mb-3">
+                <label for="id"><i class='bx bx-fingerprint' style='color:#898888' ></i> Id :</label>
+                <input type="number" class="form-control" formControlName="id" name="id" value="{{ data.Id }}"
+                    [(ngModel)]="data.Id">
+            </div>
+            <div class="form-group mb-3">
+                <label for="nom"><i class='bx bxs-user' style='color:#838282'  ></i> Nom du patient :</label>
+                <input type="text" class="form-control" formControlName="nom" name="nom" value="{{ data.Nom }}"
+                    [(ngModel)]="data.Nom">
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="date"><i class='bx bxs-calendar'></i> Date :</label>
+                <input type="date" class="form-control" formControlName="date" name="date" value="{{ data.Date }}"
+                    [(ngModel)]="data.Date">
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="service"><i class='bx bxs-first-aid'></i> Service :</label>
+                <input type="text" class="form-control" formControlName="service" name="service"
+                    value="{{ data.Service }}" [(ngModel)]="data.Service">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="quantite">Nombre de séance :</label>
+                <input type="text" class="form-control" formControlName="quantite" name="quantite"
+                    value="{{ data.Quantite }}" [(ngModel)]="data.Quantite">
+            </div>
+           
+            <div class="form-group mb-3">
+                <label for="etat"><i class='bx bx-dollar' style='color:#898888' ></i> Mode de paiement :</label>
+                <input type="text" class="form-control" formControlName="etat" name="etat"
+                    value="{{ data.Etat }}" [(ngModel)]="data.Etat">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="prix"><i class='bx bx-dollar' style='color:#898888' ></i> Prix :</label>
+                <input type="text" class="form-control" formControlName="prix" name="prix"
+                    value="{{ data.Prix }}" [(ngModel)]="data.Prix">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="total"><i class='bx bx-dollar' style='color:#898888' ></i> Total :</label>
+                <input type="text" class="form-control" formControlName="total" name="total"
+                    value="{{ data.Total }}" [(ngModel)]="data.Total">
+            </div>
+            
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"><i class='bx bxs-edit'></i> Modifier</button>
+                <button class="d-none d-sm-inline-block btn btn-sm btn-white shadow-sm" [routerLink]="['/facture']"><i class='bx bx-chevrons-left' style='color:#7d7b7b' ></i> Précédent</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+

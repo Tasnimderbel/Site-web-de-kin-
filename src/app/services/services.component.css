@@ -1,0 +1,355 @@
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding: 0 12%;
+    color: #000;
+}
+
+.services .box-conatiner{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.services .box-conatiner .box{
+    flex: 1 1 19rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.services .box-conatiner img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.services .box-conatiner .content{
+    padding: 1rem;
+}
+
+.services .box-conatiner .content h3{
+    font-size: 2rem;
+    color: #333;
+}
+
+.services .box-conatiner .content p{
+    font-size: 1.2rem;
+    color: #666;
+    padding: 1rem 0;
+    text-align: justify;
+}
+
+.services .box-conatiner .content .stars i{
+    font-size: 1.7rem;
+    color: rgb(255, 208, 0);
+}
+
+
+.services .box-conatiner .content .price{
+    font-size: 2rem;
+    color: #333;
+    padding: 1rem;
+}
+
+.services .box-conatiner .content .btn{
+    font-size: 2rem;
+    background: rgb(255, 170, 0);
+    color: white;
+    padding: 1rem;
+}
+
+.services .box-conatiner .content .price span{
+    color: #666;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+#content{
+    position: relative;
+    width: calc(100% - 280px);
+    left: 160px;
+}
+
+#content main{
+    width: 100%;
+    padding: 36px 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+
+#content main .table-data{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px;
+    margin-top: 24px;
+    width: 790px;
+    color: #342E37;
+}
+
+#content main .table-data > div{
+    border-radius: 20px;
+    background: #F9F9F9;
+    padding: 24px;
+    overflow-x: auto;
+}
+
+#content main .table-data .head{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+
+#content main .table-data .head h1{
+    margin-left: 170px;
+    color: #000;
+}
+
+#content main .table-data .head .bx{
+    cursor: pointer;
+}
+
+#content main .table-data .order{
+    flex-grow: 1;
+    flex-basis: 550px;
+}
+
+#content main .table-data .order table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#content main .table-data .order table th{
+    padding-bottom: 12px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+#content main .table-data .order table td{
+    padding: 16px 0;
+}
+
+#content main .table-data .order table tr td:first-child{
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+    padding-left: 6px;
+}
+
+#content main .table-data .order table td img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#content main .table-data .order table tbody tr:hover{
+    background: #eee;
+}
+
+#content main .table-data .order table tr td .statuts{
+    font-size: 10px;
+    padding: 6px 16px;
+    color: #F9F9F9;
+    border-radius: 20px;
+    font-weight: 700;
+    width: 90px;
+    height: 90px;
+}
+
+#content main .table-data .order table tr td .statuts.massage{
+    background: #3C91E6;
+}
+
+#content main .table-data .order table tr td .statuts.sport{
+    background: #153860;
+}
+
+
+#content main .table-data .order table tr td .statuts.amin{
+    background: #FFCE26;
+}
+
+#content main .table-data .order table tr td .statuts.chinoise{
+    background: #FD7238;
+}
+
+#content main .table-data .todo{
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+#content main .table-data .todo .todo-list{
+    width: 100%;
+}
+
+#content main .table-data .todo .todo-list li{
+    width: 100%;
+    margin-bottom: 16px;
+    background: #eee;
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 10px solid ;
+}
+
+#content main .table-data .todo .todo-list li .bx{
+    cursor: pointer;
+}
+
+#content main .table-data .todo .todo-list li.completed{
+    border-left: 10px solid #3C91E6;
+}
+
+#content main .table-data .todo .todo-list li.not-completed{
+    border-left: 10px solid #FD7238;
+}
+
+
+#content main .table-data .todo .todo-list li:last-child{
+    margin-bottom: 0;
+}
+
+
+
+footer{
+    width:100%;
+    bottom: 0;
+    background: #153860;
+    color: #fff;
+    padding: 10px 0 5px;
+    font-size: 13px;
+    line-height: 5px;
+}
+
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 5px;
+}
+
+.col h3{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.col p{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 12px;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+form .bx{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .bx{
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+
+
+.social-icons .bx{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    background: rgb(244, 222, 222);
+}
+
+.col a {
+    color: #fff;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.fleche{
+    font-size: 25px;
+    margin-left: 1420px;
+
+}
+
+.copyright{
+    text-align: center;
+}
+
